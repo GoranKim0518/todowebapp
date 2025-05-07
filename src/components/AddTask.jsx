@@ -25,11 +25,11 @@ export default function AddTask() {
 
     return(
         <div>
-            <button onClick={(event) => handleClick(event)}>
-                <FontAwesomeIcon icon={faPlus} />
-                <p>What's your focus for today?</p>
-            </button>
-            {tasks.map((item) => <ul><li key={item.id}>{item.task}</li></ul>)}
+            <div onClick={(event) => handleClick(event)}>
+                <i className="fas fa-plus"></i>
+            </div>
+                <div><p>What's your focus for today?</p></div>
+            {tasks.map((item) => <ul><i className="fa-regular fa-square-check"></i><li key={item.id}>{item.task}</li></ul>)}
             <InsertNewTask onAddTask={handleAddTask}/>
         </div>
     );
